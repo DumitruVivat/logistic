@@ -1,10 +1,10 @@
-define(function () {
+define(function() {
     return {
-        rows:[
+        rows: [
             {
                 view: 'button',
                 label: 'Main',
-                click: function () {
+                click: function() {
                     routie('')
                 }
             },
@@ -12,7 +12,7 @@ define(function () {
                 view: 'list',
                 data: [
                     'audi q7',
-                    'mbx x7',
+                    'bmw x7',
                     'uaz patriot'
                 ]
             }
