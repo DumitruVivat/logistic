@@ -30160,7 +30160,7 @@
   	UI:Uploader
   */
   // #include ui/view.js
-  // #include ui/list.js
+  // #include ui/listPage.js
 
   type(list.view, {
     name: "uploader",
@@ -38584,7 +38584,7 @@
   };
   var view$19 = exports.protoUI(api$19, Scrollable, RenderStack, DataLoader, MouseEvents, EventSystem, AutoTooltip, base.view);
 
-  // #include ui/list.js
+  // #include ui/listPage.js
 
   var api$1a = {
     name: "menu",
