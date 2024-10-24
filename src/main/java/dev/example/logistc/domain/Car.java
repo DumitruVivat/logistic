@@ -1,21 +1,12 @@
 package dev.example.logistc.domain;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import dev.example.logistc.util.EntityIdResolver;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.boot.Banner;
 
 @Entity
 @Data
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        scope = Car.class,
-        resolver = EntityIdResolver.class,
-        property = "id"
-)
 public class Car implements ComboListItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,6 +14,7 @@ public class Car implements ComboListItem {
     private String name;
 
     @ManyToOne
-    @JsonIdentityReference(alwaysAsId = true)
+    @JsonIdentityReference
+    @JsonSerialize(as=ComboListItem.class)
     private Model model;
 }

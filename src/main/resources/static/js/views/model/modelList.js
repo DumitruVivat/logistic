@@ -1,5 +1,4 @@
-define(['component/listPage', 'collections/marks'],
-    function(listPage, marks) {
+define(['component/listPage', 'collections/marks'], function(listPage, marks) {
     return listPage(
         'modelList',
         'resource->/api/model',

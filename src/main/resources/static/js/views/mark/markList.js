@@ -1,4 +1,4 @@
-define(['component/listPage'],function(listPage) {
+define(['component/listPage'], function(listPage) {
     return listPage(
         'markList',
         'resource->/api/mark',

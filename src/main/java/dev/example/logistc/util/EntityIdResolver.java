@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerator;
 import com.fasterxml.jackson.annotation.ObjectIdResolver;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Configuration;
 
 
-@Configurable
+@Configuration
 public class EntityIdResolver implements ObjectIdResolver {
 
     private final EntityManager entityManager;
