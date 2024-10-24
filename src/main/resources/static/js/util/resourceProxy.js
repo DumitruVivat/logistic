@@ -16,7 +16,7 @@ define(function() {
             var url = view.config.url.source
 
             return ajax.get(url + args).then(function(value) {
-                var response = value.json();
+                var response = value.json()
                 return {
                     data: response.content,
                     pos: response.number,
