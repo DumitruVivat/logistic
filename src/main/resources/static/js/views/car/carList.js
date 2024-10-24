@@ -1,4 +1,4 @@
-define(['component/listPage', 'collections/models'], function(listPage, models) {
+define(['component/listPage'], function(listPage) {
     return listPage(
         'carList',
         'resource->/api/car',

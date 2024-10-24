@@ -2,6 +2,7 @@ package dev.example.logistc.domain;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import dev.example.logistc.util.EntityIdResolver;
 import jakarta.persistence.*;
@@ -25,4 +26,9 @@ public class Model implements ComboListItem{
     @JsonIdentityReference(alwaysAsId = true)
     private Mark mark;
 
+    @Override
+    @JsonIgnore
+    public String getRepresentation() {
+        return String.format("%s %s",mark.getName(), name);
+    }
 }
